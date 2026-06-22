@@ -1,5 +1,5 @@
 ---
-name: openspec-from-doc
+name: gameai-openspec-from-doc
 description: 输入一个或多个文档（需求/设计/接口），自动提取→分类分析→融合生成 OpenSpec change（proposal/design/tasks/specs），最后进入 explore 讨论。
 license: MIT
 compatibility: Requires openspec CLI. Requires python3 for docx extraction.
