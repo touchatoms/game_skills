@@ -1,5 +1,5 @@
 ---
-name: game_requirement_analyzer
+name: gameai_analyze_requirement
 description: 分析游戏需求文档，拆解功能模块、客户端任务、服务端任务、配置表、接口协议、风险点、自测重点和待确认问题。适用于捕鱼、Slots、消除、活动系统、微信小游戏、Cocos、Unity 项目。
 ---
 

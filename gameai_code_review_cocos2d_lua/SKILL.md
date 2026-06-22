@@ -1,5 +1,5 @@
 ---
-name: code_review_cocos2d_lua
+name: gameai_code_review_cocos2d_lua
 description: 审查 Lua / Cocos2d-lua 游戏代码，发现 nil 风险、状态错误、重复发奖、内存泄漏、性能问题、事件未解绑、网络回调异常和可维护性问题。
 ---
 

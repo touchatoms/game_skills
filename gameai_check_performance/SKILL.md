@@ -1,5 +1,5 @@
 ---
-name: game_performance_check
+name: gameai_check_performance
 description: 游戏性能检查 Skill，分析客户端卡顿、内存、FPS、资源加载、GC、DrawCall、UI Rebuild、包体、WebGL 和小游戏性能问题。
 ---
 

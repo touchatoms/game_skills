@@ -1,5 +1,5 @@
 ---
-name: code_review_cocos_creator
+name: gameai_code_review_cocos_creator
 description: 审查 Cocos Creator / Cocos2d 游戏代码，发现节点生命周期、事件解绑、资源加载、Bundle、Prefab、SpriteAtlas、小游戏平台适配、性能和 UI 状态问题。
 ---
 

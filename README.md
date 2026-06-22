@@ -8,15 +8,15 @@
 
 ```text
 game-ai-skills/
-├── game_requirement_analyzer
-├── game_testcase_generator
-├── game_activity_analyzer
-├── game_config_checker
-├── code_review_cocos2d_lua
-├── code_review_unity
-├── code_review_cocos_creator
-├── release_check
-├── game_performance_check
+├── gameai_analyze_requirement
+├── gameai_testcase_generator
+├── gameai_analyze_activity
+├── gameai_check_config
+├── gameai_code_review_cocos2d_lua
+├── gameai_code_review_unity
+├── gameai_code_review_cocos_creator
+├── gameai_check_release
+├── gameai_check_performance
 └── README.md
 ```
 
@@ -24,70 +24,70 @@ game-ai-skills/
 
 | Skill | 作用 |
 |---|---|
-| game_requirement_analyzer | 游戏需求分析，拆解客户端、服务端、配置、接口、风险点 |
-| game_testcase_generator | 根据需求生成测试用例和开发自测清单 |
-| game_activity_analyzer | 捕鱼活动专项需求分析，重点关注强发库、库存、掉落、房间和炮倍 |
-| game_config_checker | 捕鱼配置检查，检查奖励、权重、库存、强发库参数 |
-| code_review_cocos2d_lua | Lua / Cocos2d-lua 代码审查 |
-| code_review_unity | Unity C# 代码审查 |
-| code_review_cocos_creator | Cocos Creator / Cocos2d 代码审查 |
-| release_check | 游戏发版前检查 |
-| game_performance_check | 游戏性能检查 |
+| gameai_analyze_requirement | 游戏需求分析，拆解客户端、服务端、配置、接口、风险点 |
+| gameai_testcase_generator | 根据需求生成测试用例和开发自测清单 |
+| gameai_analyze_activity | 捕鱼活动专项需求分析，重点关注强发库、库存、掉落、房间和炮倍 |
+| gameai_check_config | 捕鱼配置检查，检查奖励、权重、库存、强发库参数 |
+| gameai_code_review_cocos2d_lua | Lua / Cocos2d-lua 代码审查 |
+| gameai_code_review_unity | Unity C# 代码审查 |
+| gameai_code_review_cocos_creator | Cocos Creator / Cocos2d 代码审查 |
+| gameai_check_release | 游戏发版前检查 |
+| gameai_check_performance | 游戏性能检查 |
 
 ## 推荐用法
 
 ### 需求分析
 
 ```text
-使用 game_requirement_analyzer 分析 docs/活动需求.md
+使用 gameai_analyze_requirement 分析 docs/活动需求.md
 ```
 
 ### 生成测试用例
 
 ```text
-使用 game_testcase_generator 根据上面的需求分析结果生成测试用例
+使用 gameai_testcase_generator 根据上面的需求分析结果生成测试用例
 ```
 
 ### 捕鱼活动分析
 
 ```text
-使用 game_activity_analyzer 分析这个捕鱼活动需求，重点看强发库和奖励库存风险
+使用 gameai_analyze_activity 分析这个捕鱼活动需求，重点看强发库和奖励库存风险
 ```
 
 ### 配置检查
 
 ```text
-使用 game_config_checker 检查这个活动配置是否有上线风险
+使用 gameai_check_config 检查这个活动配置是否有上线风险
 ```
 
 ### Lua 代码 Review
 
 ```text
-使用 code_review_cocos2d_lua 审查这个领奖逻辑，重点看 nil、重复点击、网络回调和重复发奖风险
+使用 gameai_code_review_cocos2d_lua 审查这个领奖逻辑，重点看 nil、重复点击、网络回调和重复发奖风险
 ```
 
 ### Unity 代码 Review
 
 ```text
-使用 code_review_unity 审查这个活动界面代码，重点看生命周期、资源加载、按钮重复点击
+使用 gameai_code_review_unity 审查这个活动界面代码，重点看生命周期、资源加载、按钮重复点击
 ```
 
 ### Cocos 代码 Review
 
 ```text
-使用 code_review_cocos_creator 审查这个 Cocos Creator 代码，重点看 Bundle、SpriteAtlas、小游戏平台兼容
+使用 gameai_code_review_cocos_creator 审查这个 Cocos Creator 代码，重点看 Bundle、SpriteAtlas、小游戏平台兼容
 ```
 
 ### 发版检查
 
 ```text
-使用 release_check 生成微信小游戏热更新发版检查清单
+使用 gameai_check_release 生成微信小游戏热更新发版检查清单
 ```
 
 ### 性能检查
 
 ```text
-使用 game_performance_check 分析这个活动界面卡顿问题
+使用 gameai_check_performance 分析这个活动界面卡顿问题
 ```
 
 ## Claude Code 使用方式
@@ -110,11 +110,11 @@ git clone https://github.com/touchatoms/game_skills.git ~/.claude/skills/game-ai
 
 ```text
 ~/.claude/skills/
-├── game_requirement_analyzer/
+├── gameai_analyze_requirement/
 │   └── SKILL.md
-├── game_testcase_generator/
+├── gameai_testcase_generator/
 │   └── SKILL.md
-└── game_activity_analyzer/
+└── gameai_analyze_activity/
     └── SKILL.md
 ```
 
@@ -125,44 +125,158 @@ git clone https://github.com/touchatoms/game_skills.git ~/.claude/skills/game-ai
 ```text
 .claude/
 └── skills/
-    ├── game_requirement_analyzer/
-    ├── game_testcase_generator/
-    └── game_activity_analyzer/
+    ├── gameai_analyze_requirement/
+    ├── gameai_testcase_generator/
+    └── gameai_analyze_activity/
 ```
 
 ## Codex 使用方式
 
-推荐放到项目目录：
+Codex 需要先安装 Codex CLI，再把本仓库的 Skills 放到 Codex 能识别的位置。
+
+### 1. 安装或升级 Codex CLI
+
+先确认本机已经安装 Node.js 和 npm：
+
+```bash
+node -v
+npm -v
+```
+
+如果没有安装 Node.js，macOS 可以使用 Homebrew 安装：
+
+```bash
+brew install node
+```
+
+安装 Codex CLI：
+
+```bash
+npm install -g @openai/codex@latest
+```
+
+检查是否安装成功：
+
+```bash
+which codex
+codex --version
+```
+
+如果已经安装过 Codex，也可以用同一个命令升级：
+
+```bash
+npm install -g @openai/codex@latest
+codex --version
+```
+
+### 2. 安装本仓库 Skills
+
+推荐在具体游戏项目内安装，这样团队规则只影响当前项目。
+
+在游戏项目根目录创建：
 
 ```text
 .codex/
 └── skills/
-    ├── game_requirement_analyzer/
-    ├── game_testcase_generator/
-    └── game_activity_analyzer/
+    ├── gameai_analyze_requirement/
+    │   └── SKILL.md
+    ├── gameai_testcase_generator/
+    │   └── SKILL.md
+    ├── gameai_analyze_activity/
+    │   └── SKILL.md
+    ├── gameai_check_config/
+    │   └── SKILL.md
+    ├── gameai_code_review_cocos2d_lua/
+    │   └── SKILL.md
+    ├── gameai_code_review_unity/
+    │   └── SKILL.md
+    ├── gameai_code_review_cocos_creator/
+    │   └── SKILL.md
+    ├── gameai_check_release/
+    │   └── SKILL.md
+    └── gameai_check_performance/
+        └── SKILL.md
 ```
 
-也可以在项目根目录增加 `AGENTS.md`，让 Codex 更稳定地按团队规范执行。
+可以从本仓库复制：
+
+```bash
+mkdir -p /path/to/game-project/.codex/skills
+cp -R gameai_analyze_requirement /path/to/game-project/.codex/skills/
+cp -R gameai_testcase_generator /path/to/game-project/.codex/skills/
+cp -R gameai_analyze_activity /path/to/game-project/.codex/skills/
+cp -R gameai_check_config /path/to/game-project/.codex/skills/
+cp -R gameai_code_review_cocos2d_lua /path/to/game-project/.codex/skills/
+cp -R gameai_code_review_unity /path/to/game-project/.codex/skills/
+cp -R gameai_code_review_cocos_creator /path/to/game-project/.codex/skills/
+cp -R gameai_check_release /path/to/game-project/.codex/skills/
+cp -R gameai_check_performance /path/to/game-project/.codex/skills/
+```
+
+如果希望所有项目都能使用，也可以放到全局目录：
+
+```text
+~/.codex/
+└── skills/
+    └── game-ai-skills/
+```
+
+项目内安装更适合团队项目，全局安装更适合个人常用工具。
+
+### 3. 增加 AGENTS.md 规则
+
+建议在游戏项目根目录增加 `AGENTS.md`，让 Codex 更稳定地按团队规范选择 Skill。
 
 示例：
 
 ```md
 # AGENTS.md
 
-当用户要求需求分析时，优先使用 game_requirement_analyzer 的结构。
+当用户要求需求分析时，优先使用 gameai_analyze_requirement 的结构。
 
-当用户要求生成测试用例时，优先使用 game_testcase_generator 的结构。
+当用户要求生成测试用例时，优先使用 gameai_testcase_generator 的结构。
 
-当用户要求分析捕鱼活动、强发库、库存、掉落配置时，优先使用 game_activity_analyzer 或 game_config_checker。
+当用户要求分析捕鱼活动、强发库、库存、掉落配置时，优先使用 gameai_analyze_activity 或 gameai_check_config。
 
 代码审查时：
-- Lua 使用 code_review_cocos2d_lua
-- Unity 使用 code_review_unity
-- Cocos 使用 code_review_cocos_creator
+- Lua 使用 gameai_code_review_cocos2d_lua
+- Unity 使用 gameai_code_review_unity
+- Cocos 使用 gameai_code_review_cocos_creator
 
-发版前检查使用 release_check。
-性能问题分析使用 game_performance_check。
+发版前检查使用 gameai_check_release。
+性能问题分析使用 gameai_check_performance。
 ```
+
+也可以直接复制本仓库的 `AGENTS.md` 到游戏项目根目录：
+
+```bash
+cp AGENTS.md /path/to/game-project/AGENTS.md
+```
+
+### 4. 验证 Codex 是否能使用
+
+进入游戏项目根目录后运行 Codex：
+
+```bash
+cd /path/to/game-project
+codex
+```
+
+可以用下面这些提示词验证：
+
+```text
+使用 gameai_analyze_requirement 分析 docs/活动需求.md
+使用 gameai_testcase_generator 根据这个需求生成测试用例
+使用 gameai_code_review_cocos2d_lua 审查这个 Lua 活动代码
+使用 gameai_check_release 生成上线前检查清单
+```
+
+如果 Codex 没有按预期使用 Skill，优先检查：
+
+- `SKILL.md` 是否在 `.codex/skills/<skill_name>/SKILL.md`
+- `SKILL.md` 顶部的 `name:` 是否和目录名一致
+- 项目根目录是否有 `AGENTS.md`
+- 是否是在游戏项目根目录启动的 `codex`
 
 ## 团队协作建议
 
@@ -171,19 +285,19 @@ git clone https://github.com/touchatoms/game_skills.git ~/.claude/skills/game-ai
 ```text
 策划需求文档
    ↓
-game_requirement_analyzer
+gameai_analyze_requirement
    ↓
 开发任务拆解
    ↓
-game_testcase_generator
+gameai_testcase_generator
    ↓
 开发自测
    ↓
-code_review_cocos2d_lua / code_review_unity / code_review_cocos_creator
+gameai_code_review_cocos2d_lua / gameai_code_review_unity / gameai_code_review_cocos_creator
    ↓
-game_config_checker
+gameai_check_config
    ↓
-release_check
+gameai_check_release
    ↓
 上线
 ```
@@ -214,18 +328,18 @@ git push
 建议后续继续增加：
 
 ```text
-game_ui_asset_checker
-game_audio_checker
-game_i18n_checker
-android_release_check
-ios_release_check
-wechat_minigame_check
-yooassets_checker
-spriteatlas_checker
-payment_check
-ads_check
-analytics_check
-bug_root_cause_analyzer
+gameai_ui_asset_checker
+gameai_audio_checker
+gameai_i18n_checker
+gameai_android_release_check
+gameai_ios_release_check
+gameai_wechat_minigame_check
+gameai_yooassets_checker
+gameai_spriteatlas_checker
+gameai_payment_check
+gameai_ads_check
+gameai_analytics_check
+gameai_bug_root_cause_analyzer
 ```
 
 ## 维护规范

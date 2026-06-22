@@ -1,5 +1,5 @@
 ---
-name: game_testcase_generator
+name: gameai_testcase_generator
 description: 根据游戏需求文档或需求分析结果，生成完整测试用例、自测清单、边界测试、异常测试、网络测试、时间测试、奖励测试和回归测试清单。
 ---
 

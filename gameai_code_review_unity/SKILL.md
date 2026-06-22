@@ -1,5 +1,5 @@
 ---
-name: code_review_unity
+name: gameai_code_review_unity
 description: 审查 Unity C# 游戏代码，发现生命周期、空引用、异步回调、资源加载、UI 状态、协程、Addressables、SpriteAtlas、性能和内存风险。
 ---
 

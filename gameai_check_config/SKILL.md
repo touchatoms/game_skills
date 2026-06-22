@@ -1,5 +1,5 @@
 ---
-name: game_config_checker
+name: gameai_check_config
 description: 检查捕鱼项目活动配置、奖励配置、权重配置、房间配置、炮倍限制、强发库参数、库存池参数和资源配置，发现上线前风险。
 ---
 

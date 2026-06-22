@@ -1,5 +1,5 @@
 ---
-name: game_activity_analyzer
+name: gameai_analyze_activity
 description: 专门分析捕鱼项目活动需求，拆解活动流程、房间限制、炮倍限制、鱼种触发、奖励掉落、强发库、库存池、配置表、接口、风险和测试重点。
 ---
 

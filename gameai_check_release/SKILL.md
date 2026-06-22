@@ -1,5 +1,5 @@
 ---
-name: release_check
+name: gameai_check_release
 description: 游戏发版前检查 Skill，覆盖资源、配置、热更新、Bundle、支付、广告、埋点、多语言、性能、崩溃、平台审核和回滚方案。
 ---
 
